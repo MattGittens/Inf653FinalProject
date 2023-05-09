@@ -15,6 +15,14 @@ connectDB(db);
 //Middleware
 app.use(cors());
 
+app.use((req, res, next) =>{
+    const allowedOrigins = ['*'];
+    const origin = req.headers.origin;
+    if (allowedOrigins.includes(origin)) {
+         res.setHeader('Access-Control-Allow-Origin', origin);
+    }
+})
+
 app.options("*", (req, res, next)=>{
     res.header('Access-Control-Allow-Origin', "*")
     res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,OPTIONS');
