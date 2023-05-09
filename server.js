@@ -14,7 +14,7 @@ connectDB(db);
 
 //Middleware
 app.use(cors({
-    origin: "https://dazzling-snickerdoodle-777101.netlify.app/"
+    origin: "https://dazzling-snickerdoodle-777101.netlify.app"
 }));
 
 
