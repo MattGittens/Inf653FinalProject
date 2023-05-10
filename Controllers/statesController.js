@@ -2,11 +2,13 @@
 const data = {
     states: require('../models/statesData.json'),
     setStates: function (data) {this.states = data}
+
 }
+const data2 = require('../models/statesData.json');
 //Get request
 //Gets all states
 const getAllStates = (req, res) => {
-    let states = data.states
+    let states = data.states;
     if (req.query.contig === 'true'){
     states = states.filter(state => state.code !== 'AK' && state.code !== 'HI');
     }
@@ -19,20 +21,10 @@ const getAllStates = (req, res) => {
 
 //Get specific state and capital
 const getStateCapital = async (req, res) =>{
-    try{
-       const statecode = data.states;
-       const state = await statecode.filter(s => s.code === req.params.state );
-       if(!state) return res.status(404).json({message: 'State not found'});
-       
-       const stateCap = state.capital_city;
-       const stateName = state.slug;
-    res.json(stateName);
-    res.json(stateCap);
-      
-   }catch(err){
-       res.status(500).send(err.message);
-   }
+    if(!req?.params?.state) return res.status(400).json({ message: 'Employee ID required.' });
    
+    const state = await data2.findOne({code: req.params.state}).exec();
+    res.json(state);
    };
    
    
