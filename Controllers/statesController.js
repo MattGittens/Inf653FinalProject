@@ -26,7 +26,8 @@ const getStateCapital = async (req, res) =>{
        
        const stateCap = state.capital_city;
        const stateName = state.slug;
-    res.status(200).json(stateName,stateCap);
+    res.json(stateName);
+    res.json(stateCap);
       
    }catch(err){
        res.status(500).send(err.message);

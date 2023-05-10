@@ -13,11 +13,8 @@ const PORT = process.env.PORT || 3000;
 connectDB(db);
 
 //Middleware
-app.use(cors({
-    origin: "https://dazzling-snickerdoodle-777101.netlify.app"
-}));
 
-
+module.exports = allowedOrigins;
 app.options("*", (req, res, next)=>{
     res.header('Access-Control-Allow-Origin', "*")
     res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,OPTIONS');
