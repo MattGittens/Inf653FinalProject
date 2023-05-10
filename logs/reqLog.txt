@@ -79,3 +79,14 @@
 20230510	09:40:23	b908cb50-48dc-4143-bff4-11f88bce07bf	GET	undefined	/states/AZ/capital
 20230510	09:41:35	2c46ec09-7513-458c-90f5-ef88ca477c77	GET	undefined	/states/AZ/capital
 20230510	09:45:06	c901aafe-5e91-4fc0-a6d7-edc329db37f3	GET	undefined	/states/AZ/capital
+20230510	10:16:12	c4696ce3-f7db-4330-b5be-7a1688577c2f	GET	undefined	/states/rl/capital
+20230510	10:16:24	06b36b0b-6a4e-4444-b64e-03a980ab1522	GET	undefined	/states/aj/capital
+20230510	10:16:29	b887c646-4b2d-4706-8093-27e0960fffec	GET	undefined	/states/ks/capital
+20230510	10:24:54	9b1a6b9d-90ff-43a8-a449-8f267b8c926d	GET	undefined	/states/Lo/capital
+20230510	10:27:04	b8ce0562-26cf-4bc2-93d9-08dbe837b80f	GET	undefined	/states/Lo/capital
+20230510	10:31:39	3766be23-d89e-4e2a-ab60-8e630d2062df	GET	undefined	/states/Lo/capital
+20230510	10:32:06	67831d9a-de10-4df1-87ce-1e0593c92172	GET	undefined	/states/Lo/capital
+20230510	10:36:37	7acdeea3-abfb-4db0-a54f-f1f76dcb2730	GET	undefined	/states/KS/capital
+20230510	10:46:51	7f57746e-3978-4f70-bb70-f355b4799e0c	GET	undefined	/states/OK/nickname
+20230510	10:47:01	ee17eb13-74b1-4a95-9057-49dd8d7cec87	GET	undefined	/states/OK/population
+20230510	10:47:28	c3fd386d-e003-4ae8-80f4-65118f2ded16	GET	undefined	/states/OK/admission
