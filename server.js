@@ -7,7 +7,7 @@ const fs = require('fs');
 const corsOptions = require('./config/corsOptions');
 const errorHandler = require('./middleware/errorHandler.js');
 const { logger } = require('./middleware/logEvents');
-
+const mongoose = require('mongoose');
 
 
 
