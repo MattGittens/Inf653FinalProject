@@ -4,6 +4,7 @@ require('dotenv').config();
 const connectDB = require('./config/db');
 const path = require ('path');
 const fs = require('fs');
+const corsOptions = require('./config/corsOptions');
 
 const app = express();
 const db = process.env.DATABASE_URI;
@@ -14,14 +15,8 @@ connectDB(db);
 
 //Middleware
 
-module.exports = allowedOrigins;
-app.options("*", (req, res, next)=>{
-    res.header('Access-Control-Allow-Origin', "*")
-    res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,OPTIONS');
-    res.header('Access-Control-Allow-Headers', 'Authorization, Content-Length, X-Requested-Width');
-    res.send(200);
-});
 
+app.use(cors(corsOptions));
 app.use(express.json());
 
 app.use('/', express.static(path.join(__dirname, '/public')));
