@@ -72,3 +72,10 @@
 20230510	08:56:11	a19e1781-1c85-4c52-b785-6c3daeca6569	GET	undefined	/states/AZ/funfact
 20230510	08:57:28	3a2b904c-6805-47ce-b648-b92bb5945a54	GET	undefined	/states/AZ/funfact
 20230510	09:00:04	bcd0fe3b-21b1-4b68-8d9f-62aa0e6f487b	GET	undefined	/states/AZ/funfact
+20230510	09:34:17	1b19f97c-0f1e-4c7b-82a0-2f7787685059	GET	undefined	/states/AZ/capital
+20230510	09:35:10	82267de7-1524-45d6-8e95-738c2f582db0	GET	undefined	/states/AZ/capital
+20230510	09:39:24	ca9c75ed-d3da-47c7-8955-2754d2aeb575	GET	undefined	/states/AZ/capital
+20230510	09:39:47	cb01e25d-470f-44d8-9dd4-0a7583294557	GET	undefined	/states/AZ/capital
+20230510	09:40:23	b908cb50-48dc-4143-bff4-11f88bce07bf	GET	undefined	/states/AZ/capital
+20230510	09:41:35	2c46ec09-7513-458c-90f5-ef88ca477c77	GET	undefined	/states/AZ/capital
+20230510	09:45:06	c901aafe-5e91-4fc0-a6d7-edc329db37f3	GET	undefined	/states/AZ/capital

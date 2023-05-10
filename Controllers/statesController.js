@@ -21,12 +21,24 @@ const getAllStates = (req, res) => {
 
 //Get specific state and capital
 const getStateCapital = async (req, res) =>{
-    if(!req?.params?.state) return res.status(400).json({ message: 'Employee ID required.' });
+    try{
+       const statecode = data.states;
+       const ste = await data2.filter(s => s.code === req.params.state );
+       if(!ste) return res.status(404).json({message: 'Invalid state abbreviation parameter'});
+       result = ste
+        .map(({ state }) => state);
+       result2 = ste  
+        .map(({capital_city}) => capital_city);
+       // res.json(result);
+      var JSONObj = {"state": `${result}`,
+                     "Capital City": `${result2}`   
+};
+res.json(JSONObj)
+   }catch(err){
+       res.status(500).send(err.message);
+   }
    
-    const state = await data2.findOne({code: req.params.state}).exec();
-    res.json(state);
    };
-   
    
 
 //Exports
