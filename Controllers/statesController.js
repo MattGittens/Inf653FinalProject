@@ -176,17 +176,29 @@ const updateFunFact = async (req, res) => {
     const { state } = req.params;
     const { index, funfact } = req.body;
 
-    if (!index || !funfact) {
-      return res.status(400).json({ message: 'Invalid request body' });
+    if (!index) {
+      return res.status(400).json({ message: 'State fun fact index value required' });
     }
-
+  if(!funfact){
+        return res.status(404).json({ message: 'State fun fact value required' });
+      }
     const stateData = await Sae.findOne({ code: state });
-
-    if (!stateData || stateData.funfacts.length < index) {
-      return res.status(404).json({ message: 'State fun fact value required' });
+    
+    if (!stateData) { 
+      const ste = await data2.filter(s => s.code === state );
+      var result = ste
+        .map(({ state }) => state);
+    return res.status(404).json({ message: `No Fun Facts found for ${result}`}) 
+    }
+    
+    
+    if(stateData.funfacts.length < index){   
+   
+      
+      
     }
     if(stateData.funfacts.length === 0){
-      return res.status(404).json({ message: 'State fun fact index value required '})
+      return res.status(404).json({ message: 'State fun fact index value required'})
     }
 
     stateData.funfacts[index - 1] = funfact;
@@ -206,7 +218,7 @@ const deleteFunFact = async (req, res) => {
     const { index } = req.body;
 
     if (!index) {
-      return res.status(400).json({ message: 'Invalid request body' });
+      return res.status(400).json({ message: 'State fun fact index value required' });
     }
 
     const stateData = await Sae.findOne({ code: state });
